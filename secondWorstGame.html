@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="CSS/worstgameStyles.css">
+    <title>Second Worst Game Ever</title>
+</head>
+<body>
+    <div id="main">
+        <!-- intro -->
+        <h1>Second Worst Game Ever!</h1>
+        <p>
+            Guess a number between 0 and 10.
+        </p>
+        <p>
+            <input type="number" id="guessNum">
+        </p>
+
+        <!-- game -->
+        <div id="game">
+            <button onclick = "checkNum()">Start!</button>
+
+        
+            <script>
+                function checkNum() {
+                    const guessedNum = document.getElementById("guessNum").value;
+                    const num = Math.floor(Math.random() * (10 - 0) + 0);
+                    
+                    console.log("guessedNum", guessedNum);
+                    console.log("num", num);
+
+                    if (guessedNum == num){
+                        location.href = "pages/winResult.html";
+                    }
+                    else {
+                        location.href = "pages/loseResult.html";
+                    }
+                }
+            </script>
+        </div>
+        <br/><br/><br/>
+        <p>
+            Or, check out <a href="index.html"> the worst game ever</a>.
+        </p>
+
+    </div>
+</body>
+</html>
